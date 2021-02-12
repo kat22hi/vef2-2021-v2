@@ -16,13 +16,17 @@ app.get('/', (req, res) => {
 <form method="post" action="/post" enctype="application/x-www-form-urlencoded">
   <input type="text" name="data">
   <input type="file" name="file">
-  <button>Senda</button>
+  <button>Hali er me[ tybi</button>
 </form>
   `);
 });
 
 app.post('/post', (req, res) => {
   res.send(`POST gögn: ${JSON.stringify(req.body)}`);
+});
+
+app.post('/', (req, res) => {
+  res.send('HAlli er me[ tybi')
 });
 
 app.listen(port, () => {
