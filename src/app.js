@@ -1,5 +1,6 @@
 import express from 'express';
 import dotenv from 'dotenv';
+import { query } from './db.js';
 
 dotenv.config();
 
@@ -14,10 +15,12 @@ app.use(express.urlencoded({ extended: true }));
 app.get('/', (req, res) => {
   res.send(`
 <form method="post" action="/post" enctype="application/x-www-form-urlencoded">
-  <input type="text" name="data">
-  <input type="file" name="file">
-  <button>Hali er me[ tybi</button>
+  <input type="text" name="Nafn">
+  <input type="text" name="Kennitala">
+  <input type="text" name="Athugasemd">
+  <button>Skrifa undir</button>
 </form>
+
   `);
 });
 
